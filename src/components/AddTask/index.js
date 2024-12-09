@@ -17,7 +17,7 @@ const AddPage = () => {
     const addTaskHandler = e => {
         e.preventDefault()
         console.log("Values:",values)
-        axios.post(`http://localhost:3009/api/tasks`,values)
+        axios.post(`https://task-management-system-nodejs.netlify.app/api/tasks`,values)
         .then((response)=> {
             console.log(response)
             navigate("/")
