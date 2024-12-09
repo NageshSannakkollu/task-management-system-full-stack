@@ -16,7 +16,7 @@ const HomePage = () => {
     if(deleted){
       setDeleted(false)
     const getTaskData = async() => {
-      const response = await fetch("https://backend-task-management-system.netlify.app/api/tasks");
+      const response = await fetch("http://localhost:3009/api/tasks");
       const data = await response.json()
       setTaskList(data)
     }   
@@ -26,7 +26,7 @@ const HomePage = () => {
 
   const clickOnDelete = (id) => {
     console.log("delete Id:",id)
-    axios.delete(`https://backend-task-management-system.netlify.app/api/tasks/${id}`)
+    axios.delete(`http://localhost:3009/api/tasks/${id}`)
     .then(response => {
       console.log(response)
       setDeleted(true)
